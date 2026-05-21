@@ -1,0 +1,39 @@
+:root {
+  /* Background */
+  --bg-primary: #09090b;
+  --bg-secondary: #0d0a08;
+  --bg-card: rgba(9, 9, 11, 0.6);
+
+  /* Accent - Copper/Gold */
+  --accent: #d97706;
+  --accent-light: #fbbf24;
+  --accent-glow: rgba(217, 119, 6, 0.15);
+
+  /* Accent - Teal */
+  --teal: #2dd4bf;
+  --teal-glow: rgba(45, 212, 191, 0.1);
+
+  /* Text */
+  --text-primary: #faf5e8;
+  --text-secondary: #a8a29e;
+  --text-tertiary: #78716c;
+
+  /* Border */
+  --border-subtle: rgba(217, 119, 6, 0.08);
+  --border-medium: rgba(217, 119, 6, 0.15);
+  --border-teal: rgba(45, 212, 191, 0.15);
+
+  /* Typography */
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Courier New', monospace;
+
+  /* Spacing */
+  --section-gap: 120px;
+  --content-max: 1200px;
+  --card-radius: 8px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 40px rgba(217, 119, 6, 0.08);
+}
