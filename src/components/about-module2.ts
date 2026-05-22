@@ -15,19 +15,6 @@ export function createAboutModule2(): HTMLElement {
   const divider = createEl('div', { class: 'section-divider' });
   container.appendChild(divider);
 
-  // Personal photo 2 — landscape banner
-  const photoSection = createEl('div', { class: 'about2-photo-section', 'data-reveal': '' });
-  const photoFrame = createEl('div', { class: 'about2-photo-frame' });
-  const img = createEl('img', {
-    src: './images/photos/photo2.jpg',
-    alt: '何林江',
-    class: 'about2-photo',
-    loading: 'lazy',
-  });
-  photoFrame.appendChild(img);
-  photoSection.appendChild(photoFrame);
-  container.appendChild(photoSection);
-
   // Skills section
   const skillsSection = createEl('div', { class: 'skills-section', 'data-reveal': '' });
   const skillsTitle = createEl('h3', { class: 'subsection-title' }, '技术技能栈');

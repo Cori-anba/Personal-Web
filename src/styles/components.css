@@ -173,6 +173,9 @@
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.hero-scroll-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -416,36 +419,6 @@
 /* ============================================
    About Module 2
    ============================================ */
-
-/* Photo 2 landscape banner */
-.about2-photo-section {
-  margin-bottom: 48px;
-}
-
-.about2-photo-frame {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border-medium);
-  box-shadow: 0 0 60px rgba(217, 119, 6, 0.06);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.about2-photo-frame::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 70%, rgba(9, 9, 11, 0.3));
-  z-index: 1;
-  pointer-events: none;
-}
-
-.about2-photo {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
 .subsection-title {
   font-family: var(--font-display);

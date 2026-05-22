@@ -28,12 +28,14 @@ export function createHero(): HTMLElement {
 
   // Scroll indicator — direct child of section so position:absolute anchors to hero height
   const scrollHint = createEl('div', { class: 'hero-scroll-hint' });
-  scrollHint.innerHTML = `
+  const scrollInner = createEl('div', { class: 'hero-scroll-inner' });
+  scrollInner.innerHTML = `
     <span class="hero-scroll-text">Scroll to explore</span>
     <svg class="hero-scroll-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path d="M12 5v14M5 12l7 7 7-7"/>
     </svg>
   `;
+  scrollHint.appendChild(scrollInner);
   section.appendChild(scrollHint);
 
   return section;
