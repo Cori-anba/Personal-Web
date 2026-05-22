@@ -47,6 +47,7 @@ export function createProjectsSection(): HTMLElement {
         alt: sp.name,
         class: 'supplementary-img',
         loading: 'lazy',
+        decoding: 'async',
       });
       // Fallback if image fails
       img.addEventListener('error', () => {

@@ -14,6 +14,7 @@ export function createProjectCard(project: Project, index: number): HTMLElement 
     alt: project.imageAlt,
     class: 'project-card-thumb',
     loading: 'lazy',
+    decoding: 'async',
   });
   imgWrap.appendChild(img);
 
