@@ -70,13 +70,18 @@ export function createAboutModule1(): HTMLElement {
   `;
   rightCol.appendChild(eduCard);
 
-  // Hobbies
-  const hobbiesRow = createEl('div', { class: 'about-hobbies', 'data-reveal': '' });
-  hobbies.forEach((hobby) => {
-    const tag = createEl('span', { class: 'hobby-tag' }, hobby);
-    hobbiesRow.appendChild(tag);
-  });
-  rightCol.appendChild(hobbiesRow);
+  // Hobbies card
+  const hobbiesCard = createEl('div', { class: 'about-edu-card hobbies-card', 'data-reveal': '' });
+  hobbiesCard.innerHTML = `
+    <div class="edu-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </div>
+    <h3 class="edu-school">个人爱好</h3>
+    <div class="about-hobbies">
+      ${hobbies.map((hobby) => `<span class="hobby-tag">${hobby}</span>`).join('')}
+    </div>
+  `;
+  rightCol.appendChild(hobbiesCard);
 
   // Self evaluation quote
   const quoteCard = createEl('blockquote', { class: 'about-quote', 'data-reveal': '' });

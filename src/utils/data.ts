@@ -91,7 +91,7 @@ export const honors: Honor[] = [
   },
   {
     title: '2025 蓝桥杯省一等奖',
-    subtitle: 'Python 大学A组',
+    subtitle: '福建省 Python 大学A组',
     icon: 'medal',
     highlight: true,
   },

@@ -1005,6 +1005,48 @@
 }
 
 /* ============================================
+   Card Glow — subtle boundary glow for night/dark mode visibility
+   ============================================ */
+.about-edu-card,
+.skill-category-card,
+.honor-card,
+.contact-link-item,
+.contact-form-col,
+.supplementary-card {
+  box-shadow:
+    0 0 0 1px rgba(250, 245, 232, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-edu-card:hover,
+.skill-category-card:hover,
+.honor-card:hover,
+.contact-link-item:hover,
+.contact-form-col:hover,
+.supplementary-card:hover {
+  box-shadow:
+    0 0 0 1px rgba(250, 245, 232, 0.08),
+    0 0 24px rgba(250, 245, 232, 0.03),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Project outcome card glow */
+.project-card-outcome {
+  box-shadow:
+    0 0 0 1px rgba(45, 212, 191, 0.1),
+    0 0 12px rgba(45, 212, 191, 0.04);
+}
+
+.about-quote {
+  box-shadow: 0 0 0 1px rgba(250, 245, 232, 0.03);
+}
+
+/* Hobbies card specific */
+.hobbies-card .about-hobbies {
+  margin-top: 14px;
+}
+
+/* ============================================
    Cursor Glow
    ============================================ */
 .cursor-glow {
