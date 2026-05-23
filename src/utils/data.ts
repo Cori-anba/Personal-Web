@@ -237,7 +237,7 @@ export const projects: Project[] = [
       { heading: '统一AI服务网关', content: '设计了支持多厂商模型（OpenAI, Claude, DeepSeek等）的抽象层，指导AI实现了基于工厂模式的统一调用网关，并主导设计了对话上下文管理、Token优化与流式输出策略。' },
       { image: './images/RepoChat网站项目/主页展示.jpg', imageAlt: 'RepoChat 项目主页展示' },
       { heading: '可扩展工具链', content: '为突破纯对话的分析限制，决策集成MCP协议，并指导AI实现了完整的MCP客户端/服务端框架，使工具能力可动态扩展，体现了对开发者工具生态的前瞻性理解。' },
-      { image: './images/RepoChat网站项目/推荐页面展示.jpg', imageAlt: '推荐页及AI提问功能展示' },
+      { image: './images/RepoChat网站项目/推荐页面展示.jpg', imageAlt: '项目智能推荐页面展示' },
       { heading: '产品化与开发者体验', content: '主导了产品的整体视觉与交互设计，基于Tailwind CSS构建了独特的玻璃态科技风设计系统。深度参与了从GitHub项目发现、一键克隆到仓库分析的全链路体验设计，确保工具对开发者友好且高效。' },
       { heading: '项目成果', content: '成功实现一个功能完整、体验流畅、具备生产可用性的桌面级开发者工具，涵盖了代码库分析的核心场景，并具备强大的可扩展性。系统沉淀了一套AI协同的全栈应用开发规范。' },
     ],
@@ -265,7 +265,7 @@ export const projects: Project[] = [
       { heading: '系统设计与全流程开发', content: '作为独立开发者，完成了从需求分析、技术选型、前后端逻辑到GUI交互的全流程实现。独立设计了包含用户登录、注册、车型选择的数据管理模块，使用SQLite进行本地数据存储。' },
       { image: './images/疲劳驾驶检测系统/主界面UI.jpg', imageAlt: '疲劳驾驶检测系统主界面' },
       { heading: '双路视频分析与检测算法集成', content: '道路端分析：基于YOLOv5s模型实现了对输入道路视频的车辆、行人等目标的实时检测，通过OpenCV将检测结果可视化。驾驶员端分析：利用摄像头捕获驾驶员画面，集成YOLOv5s与MediaPipe模型，同步实现对使用手机等目标的检测，以及闭眼、打哈欠等疲劳面部特征的识别。' },
-      { image: './images/疲劳驾驶检测系统/目标检测.jpg', imageAlt: '道路目标检测与驾驶员状态检测' },
+      { image: './images/疲劳驾驶检测系统/目标检测.jpg', imageAlt: '目标检测与驾驶员状态检测' },
       { heading: '图形界面与系统打包', content: '使用Tkinter开发了完整的图形用户界面，集成了视频选择、摄像头开启、结果展示与报警提示等功能。最终将整个项目打包为可独立运行的桌面应用程序，完成了从算法到产品的闭环。' },
       { heading: '项目成果', content: '成功开发出一个功能较为完整、可交互演示的桌面应用原型，实现了对内外双路视频流的实时安全监测，有效验证了多模型协同解决复杂场景问题的技术路径。' },
     ],
@@ -382,6 +382,6 @@ export const supplementaryProjects = [
 
 export const navLinks = [
   { label: '关于我', href: '#about' },
-  { label: '项目', href: '#projects' },
+  { label: '项目作品', href: '#projects' },
   { label: '联系', href: '#contact' },
 ];
