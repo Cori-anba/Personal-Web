@@ -20,22 +20,36 @@ function copyReferencedImagesPlugin(): Plugin {
 
       const rootDir = join(__dirname);
       let copied = 0;
+      let hdCopied = 0;
 
       for (const relPath of imagePaths) {
+        // Copy mobile image
         const srcPath = join(rootDir, 'images', relPath);
         const destPath = join(rootDir, 'dist', 'images', relPath);
 
         if (!existsSync(srcPath)) {
           console.warn(`  ⚠ Missing: images/${relPath}`);
-          continue;
+        } else {
+          mkdirSync(dirname(destPath), { recursive: true });
+          copyFileSync(srcPath, destPath);
+          copied++;
         }
 
-        mkdirSync(dirname(destPath), { recursive: true });
-        copyFileSync(srcPath, destPath);
-        copied++;
+        // Copy HD image if it exists in images-hd/
+        const hdSrcPath = join(rootDir, 'images-hd', relPath);
+        const hdDestPath = join(rootDir, 'dist', 'images-hd', relPath);
+
+        if (existsSync(hdSrcPath)) {
+          mkdirSync(dirname(hdDestPath), { recursive: true });
+          copyFileSync(hdSrcPath, hdDestPath);
+          hdCopied++;
+        }
       }
 
-      console.log(`✓ Copied ${copied} referenced images to dist/images/`);
+      console.log(`✓ Copied ${copied} images to dist/images/`);
+      if (hdCopied > 0) {
+        console.log(`✓ Copied ${hdCopied} HD images to dist/images-hd/`);
+      }
     },
   };
 }

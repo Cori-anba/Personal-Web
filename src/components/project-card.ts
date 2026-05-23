@@ -7,8 +7,11 @@ export function createProjectCard(project: Project, index: number): HTMLElement 
     'data-reveal': index % 2 === 0 ? 'left' : 'right',
   });
 
-  // Image
+  // Image — responsive: HD on desktop, optimized on mobile
   const imgWrap = createEl('div', { class: 'project-card-img' });
+  const hdSrc = project.image.replace('./images/', './images-hd/');
+  const picture = createEl('picture', {});
+  const source = createEl('source', { media: '(min-width: 1024px)', srcset: hdSrc });
   const img = createEl('img', {
     src: project.image,
     alt: project.imageAlt,
@@ -16,7 +19,9 @@ export function createProjectCard(project: Project, index: number): HTMLElement 
     loading: 'lazy',
     decoding: 'async',
   });
-  imgWrap.appendChild(img);
+  picture.appendChild(source);
+  picture.appendChild(img);
+  imgWrap.appendChild(picture);
 
   // Shimmer overlay
   const shimmer = createEl('div', { class: 'project-card-shimmer' });

@@ -42,6 +42,9 @@ export function createProjectsSection(): HTMLElement {
 
     // Image if available
     if ('image' in sp && sp.image) {
+      const hdSrc = sp.image.replace('./images/', './images-hd/');
+      const picture = createEl('picture', {});
+      const source = createEl('source', { media: '(min-width: 1024px)', srcset: hdSrc });
       const img = createEl('img', {
         src: sp.image,
         alt: sp.name,
@@ -53,7 +56,9 @@ export function createProjectsSection(): HTMLElement {
       img.addEventListener('error', () => {
         img.style.display = 'none';
       });
-      card.appendChild(img);
+      picture.appendChild(source);
+      picture.appendChild(img);
+      card.appendChild(picture);
     }
 
     const info = createEl('div', { class: 'supplementary-info' });

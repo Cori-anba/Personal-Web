@@ -22,6 +22,9 @@ export function createAboutModule1(): HTMLElement {
   // Left column - Photo
   const leftCol = createEl('div', { class: 'about-left', 'data-reveal': '' });
   const photoFrame = createEl('div', { class: 'about-photo-frame' });
+  const hdSrc = personalInfo.avatar.replace('./images/', './images-hd/');
+  const picture = createEl('picture', {});
+  const source = createEl('source', { media: '(min-width: 1024px)', srcset: hdSrc });
   const img = createEl('img', {
     src: personalInfo.avatar,
     alt: personalInfo.avatarAlt,
@@ -29,7 +32,9 @@ export function createAboutModule1(): HTMLElement {
     loading: 'lazy',
     decoding: 'async',
   });
-  photoFrame.appendChild(img);
+  picture.appendChild(source);
+  picture.appendChild(img);
+  photoFrame.appendChild(picture);
   leftCol.appendChild(photoFrame);
 
   // Quick contact buttons under photo
