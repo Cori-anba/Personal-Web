@@ -2,7 +2,9 @@ import { projects, supplementaryProjects } from '../utils/data';
 import { createEl } from '../utils/dom';
 import { createProjectCard } from './project-card';
 
-export function createProjectsSection(): HTMLElement {
+import { Project } from '../utils/data';
+
+export function createProjectsSection(onProjectClick?: (project: Project) => void): HTMLElement {
   const section = createEl('section', { id: 'projects', class: 'projects-section section' });
   const container = createEl('div', { class: 'container' });
 
@@ -25,7 +27,7 @@ export function createProjectsSection(): HTMLElement {
   // Main projects grid
   const grid = createEl('div', { class: 'projects-grid' });
   projects.forEach((project, i) => {
-    const card = createProjectCard(project, i);
+    const card = createProjectCard(project, i, onProjectClick);
     grid.appendChild(card);
   });
   container.appendChild(grid);

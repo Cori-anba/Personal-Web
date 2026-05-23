@@ -16,11 +16,16 @@ import { ParticleBackground } from './effects/particle-bg';
 import { CursorGlow } from './effects/cursor-glow';
 import { ScrollReveal } from './effects/scroll-reveal';
 
+import { ProjectModal } from './components/modal';
+
 import { renderToApp } from './utils/dom';
 
 function init(): void {
   // Full-page particle background (fixed canvas behind everything)
   new ParticleBackground();
+
+  // Project detail modal
+  const modal = new ProjectModal();
 
   // Render all sections
   renderToApp(
@@ -28,7 +33,7 @@ function init(): void {
     createHero(),
     createAboutModule1(),
     createAboutModule2(),
-    createProjectsSection(),
+    createProjectsSection((project) => modal.open(project)),
     createContactSection(),
     createFooter()
   );

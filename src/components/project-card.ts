@@ -1,7 +1,7 @@
 import { Project } from '../utils/data';
 import { createEl } from '../utils/dom';
 
-export function createProjectCard(project: Project, index: number): HTMLElement {
+export function createProjectCard(project: Project, index: number, onClick?: (project: Project) => void): HTMLElement {
   const card = createEl('article', {
     class: `project-card ${project.featured ? 'project-card--featured' : ''}`,
     'data-reveal': index % 2 === 0 ? 'left' : 'right',
@@ -76,6 +76,11 @@ export function createProjectCard(project: Project, index: number): HTMLElement 
 
   // 3D hover effect
   setup3DHover(card);
+
+  // Click to open detail modal
+  if (onClick) {
+    card.addEventListener('click', () => onClick(project));
+  }
 
   return card;
 }
